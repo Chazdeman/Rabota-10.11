@@ -128,29 +128,14 @@ def date(day: int ,month: int , year: int):
     :param int day, int month , int years : True or False
     :rtype bool:
     """
-    # если год високосный
-    if year%4 == 0:
-        # проверяем попадает ли месяц и день в лимиты
-        if month == 2 and 0 < day <= 29:
-            vastus=True
-        elif  0 < day <= 31:
-            vastus=True
-        elif 30 and 0 < day <= 30:
-            vastus=True
+    if((month==1 or month>=1)and (month<=12 or month==12)) and ((day==1 or day>=1) and (day==31 or day<=31)) and year>=0:
+        if month==2 and day<=30:
+            if year%4==0 and day==29:
+                otv="True"
+            else:
+                otv="False"
+        elif(month==1 or month==3 or month==5 or month==7 or month==8 or month==10 or month==12) and (day==31 or day<=31):
+               otv="True"
         else:
-            vastus=False
-    # если год обычный
-    elif year%4 != 0:
-        # проверяем попадает ли месяц и день в лимиты
-        if month == 2 and 0 < day < 28:
-            vastus=True
-        elif 0 < day <= 31:
-            vastus=True
-        elif 0 < day <= 30:
-            vastus=True
-        else:
-            vastus=False
-    else:
-        vastus=False
-
-    return vastus
+                otv="False"
+    return otv
