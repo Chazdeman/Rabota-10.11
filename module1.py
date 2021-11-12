@@ -20,10 +20,10 @@ def arithmetic(a: float, b: float,c: str):
         if b!=0:
             r=a/b
         else:
-            print("Div0")
+            r="Div0"
             r=0.0
     else:
-        print("Viga")
+        r="Viga"
         r=0.0
     return r
 
@@ -43,7 +43,7 @@ def Yearleep(aasta: int):
 def square(j:float):
     #leidmine P S D
     #:Param float number: P S D
-    #:rtype str: int int int
+    #:rtype int: int int int
     if j!=0:
         p=j*4
         s=j*j
