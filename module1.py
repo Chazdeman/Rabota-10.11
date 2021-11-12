@@ -40,26 +40,24 @@ def Yearleep(aasta: int):
         vastus=False
    return vastus
 
-
 def square(j:float):
     #leidmine P S D
     #:Param float number: P S D
-    #:rtype bool: 
+    #:rtype str: int int int
     if j!=0:
-        pop=""
         p=j*4
         s=j*j
         d=sqrt(j*j*j*j)
-        print("P=",p)
-        print("S=", s)
-        print("D=" , d)
+        r=(("P="),p)
+        k=(("S="),s)
+        o=(("D="),d)
 
-    return pop
+    return r,k,o
 
 def season(a: int):
     #otsime, millele see kuu kuulub 봄여름가을겨울 그리고 봄
-    #:param int seson: seson
-    #:rtype bool: Funktsiooni vastus seson
+    #:param int seson: kuu järjekordne number
+    #:rtype str: hooaja nimetus
     #Tagastab season talv või kevad või suvi või sügis 
     if a==12 or 1 <= a <= 2:
         r="See on talv"
@@ -76,7 +74,7 @@ def season(a: int):
 def is_prime(a: int):
     #algarve leidmine
     #:param int number : True or False
-    #:rtype bool: Funktsiooni vastus 1 or 2
+    #:rtype str: Funktsiooni vastus 1 or 2
     #Tagastab True kui on algarve ja False kui on midagi muu
     if a % 2 == 0 and a != 2:
         return False
@@ -97,7 +95,8 @@ def Bank(a: float , years: int):
     return b 
 
 def xor_cipher(string: str , key: str)->str:
-    """Tavaline sõna kodeeritakse 
+    """Tavaline sõna kodeeritakse
+    param: str sõna : str key
     ord - десятичное число,которое кодирует букву
     """
     result = ''
@@ -110,7 +109,9 @@ def xor_cipher(string: str , key: str)->str:
     return result
 
 def xor_uncipher(string:str , key: str) -> str:
-    """chr - наоборот берёт число и возвращает букву.
+    """
+    param str
+    chr - наоборот берёт число и возвращает букву.
     """
     result = ''
     temp=[]

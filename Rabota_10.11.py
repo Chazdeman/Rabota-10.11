@@ -20,7 +20,6 @@ while True:
     if v.upper()=="B":
          rezult=square(int(input("Sisesta number")))
          print(rezult)
-    
     if v.upper()=="C":
         otvet=season(int(input("Sisesta kuu =>"))) 
         print(otvet)
