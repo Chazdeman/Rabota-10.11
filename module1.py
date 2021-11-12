@@ -83,7 +83,8 @@ def is_prime(a: int):
     for n in range(3, int(sqrt(a).real) + 1, 2):
         if a % n == 0:  
             return False
-    return True  
+    else:
+        return True  
 
 def Bank(a: float , years: int):
     #otsime, milline on panus
@@ -132,9 +133,9 @@ def date(day: int ,month: int , year: int):
         # проверяем попадает ли месяц и день в лимиты
         if month == 2 and 0 < day <= 29:
             vastus=True
-        elif month in 31 and 0 < day <= 31:
+        elif  0 < day <= 31:
             vastus=True
-        elif month in 30 and 0 < day <= 30:
+        elif 30 and 0 < day <= 30:
             vastus=True
         else:
             vastus=False
@@ -143,9 +144,9 @@ def date(day: int ,month: int , year: int):
         # проверяем попадает ли месяц и день в лимиты
         if month == 2 and 0 < day < 28:
             vastus=True
-        elif month in 31 and 0 < day <= 31:
+        elif 0 < day <= 31:
             vastus=True
-        elif month in 30 and 0 < day <= 30:
+        elif 0 < day <= 30:
             vastus=True
         else:
             vastus=False
